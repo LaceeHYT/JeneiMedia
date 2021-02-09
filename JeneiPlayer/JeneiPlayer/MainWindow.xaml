@@ -1,0 +1,30 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JeneiPlayer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="547.896" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="533*"/>
+            <RowDefinition Height="136*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="Background 400px.jpg"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Slider x:Name="timeSlider" HorizontalAlignment="Center" Margin="23,348,22,0" VerticalAlignment="Top" Width="347" Height="18" ValueChanged="timeSlider_ValueChanged" TickFrequency="10" Cursor="Arrow"/>
+        <Button x:Name="PlayStop" Content="Play" HorizontalAlignment="Center" Margin="23,426,294,0" VerticalAlignment="Top" Width="75" Height="21" Click="PlayStop_Click" RenderTransformOrigin="0.548,0.318" Grid.RowSpan="2"/>
+        <Button x:Name="FileOpen" Content="Fájlok megnyitása" HorizontalAlignment="Left" Height="21" Margin="207,426,0,0" VerticalAlignment="Top" Width="163" Click="FileOpen_Click" Grid.RowSpan="2"/>
+        <ListBox x:Name="OpenSongList" HorizontalAlignment="Center" Height="166" Margin="23,58,22,0" VerticalAlignment="Top" Width="347" SelectionChanged="OpenSongList_SelectionChanged"/>
+        <Button x:Name="Stop" Content="Stop" HorizontalAlignment="Center" Margin="119,426,198,0" VerticalAlignment="Top" Width="75" Height="21" Click="Stop_Click" Grid.RowSpan="2"/>
+        <Button x:Name="Prev" Content="Prev&#xD;&#xA;" HorizontalAlignment="Center" Margin="23,387,294,0" VerticalAlignment="Top" Width="75" Height="21" Click="Prev_Click"/>
+        <Button x:Name="Next" Content="Next" HorizontalAlignment="Center" Margin="119,387,198,0" VerticalAlignment="Top" Width="75" Height="21" Click="Next_Click" RenderTransformOrigin="1.053,0.519"/>
+        <Slider x:Name="VolumeSlider" HorizontalAlignment="Right" Margin="0,390,22,0" VerticalAlignment="Top" Width="163" Height="18" SmallChange="0.01" Maximum="1" ValueChanged="VolumeSlider_ValueChanged" Value="0.5"/>
+
+    </Grid>
+</Window>
